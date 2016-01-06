@@ -273,8 +273,8 @@ main(int argc, char *const *argv)
 
             ngx_write_stderr("configure arguments:" NGX_CONFIGURE NGX_LINEFEED);
         }
-
-        if (!ngx_test_config) {
+		
+        if (!ngx_test_config) { //根据启动时传入的参数设置ngx_test_config,如：nginx -v 这里退出程序不运行了
             return 0;
         }
     }
@@ -321,6 +321,7 @@ main(int argc, char *const *argv)
         return 1;
     }
 
+	//获取运行环境的一些相关参数如内存页大小，cpu个数，最大socket连接数等,因为根据运行环境内核参数等可以优化配置
     if (ngx_os_init(log) != NGX_OK) {
         return 1;
     }
@@ -329,10 +330,11 @@ main(int argc, char *const *argv)
      * ngx_crc32_table_init() requires ngx_cacheline_size set in ngx_os_init()
      */
 
-    if (ngx_crc32_table_init() != NGX_OK) {
+    if (ngx_crc32_table_init() != NGX_OK) {	//建立循环冗余校验表
         return 1;
     }
-
+	
+	//nginx升级时，新的nginx进程继承旧的nginx进程打开的描述符，继续保证与客户端的网络连接
     if (ngx_add_inherited_sockets(&init_cycle) != NGX_OK) {
         return 1;
     }
@@ -341,7 +343,7 @@ main(int argc, char *const *argv)
     for (i = 0; ngx_modules[i]; i++) {
         ngx_modules[i]->index = ngx_max_module++;
     }
-
+	/*建立新的cycle*/
     cycle = ngx_init_cycle(&init_cycle);
     if (cycle == NULL) {
         if (ngx_test_config) {
@@ -429,8 +431,9 @@ ngx_add_inherited_sockets(ngx_cycle_t *cycle)
     u_char           *p, *v, *inherited;
     ngx_int_t         s;
     ngx_listening_t  *ls;
-
-    inherited = (u_char *) getenv(NGINX_VAR);
+	
+	/*NGINX_VAR 就是  “NGINX” ，该环境变量存放已有的文件描述符列表如“12;333:42;90:354”*/
+    inherited = (u_char *) getenv(NGINX_VAR);	
 
     if (inherited == NULL) {
         return NGX_OK;
