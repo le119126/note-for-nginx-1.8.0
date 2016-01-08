@@ -321,8 +321,10 @@ main(int argc, char *const *argv)
         return 1;
     }
 
-	//获取运行环境的一些相关参数如内存页大小，cpu个数，最大socket连接数等,因为根据运行环境内核参数等可以优化配置
-    if (ngx_os_init(log) != NGX_OK) {
+	/*获取运行环境的一些相关参数如内存页大小，cpu个数，最大socket连接数等,因为根据运行环境内核参数等可以优化配置
+	  调用ngx_init_setproctitle(log)初始化修改进程名称操作：拷贝移动environ，求environment的最后内存位置	
+	*/
+	if (ngx_os_init(log) != NGX_OK) {
         return 1;
     }
 
@@ -414,6 +416,7 @@ main(int argc, char *const *argv)
 
     ngx_use_stderr = 0;
 
+	/*创建工作线程*/
     if (ngx_process == NGX_PROCESS_SINGLE) {
         ngx_single_process_cycle(cycle);
 

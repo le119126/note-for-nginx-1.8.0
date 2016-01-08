@@ -27,9 +27,9 @@
  * parenthesis.
  */
 
-extern char **environ;
+extern char **environ;	//argv 与 environ是连续存放的
 
-static char *ngx_os_argv_last;
+static char *ngx_os_argv_last;	//指向argv+environ连续内存的最后一个位置
 
 ngx_int_t
 ngx_init_setproctitle(ngx_log_t *log)
@@ -48,15 +48,17 @@ ngx_init_setproctitle(ngx_log_t *log)
     if (p == NULL) {
         return NGX_ERROR;
     }
-
+	
+	//求ngx_os_argv_last
     ngx_os_argv_last = ngx_os_argv[0];
-
+	
     for (i = 0; ngx_os_argv[i]; i++) {
         if (ngx_os_argv_last == ngx_os_argv[i]) {
             ngx_os_argv_last = ngx_os_argv[i] + ngx_strlen(ngx_os_argv[i]) + 1;
         }
     }
-
+	
+	//拷贝environ，修改enviro[i]指向新的拷贝位置，后移ngx_os_argv_last.
     for (i = 0; environ[i]; i++) {
         if (ngx_os_argv_last == environ[i]) {
 
@@ -87,7 +89,7 @@ ngx_setproctitle(char *title)
 
 #endif
 
-    ngx_os_argv[1] = NULL;
+    ngx_os_argv[1] = NULL;	//截断开argv[0]、argv[1]
 
     p = ngx_cpystrn((u_char *) ngx_os_argv[0], (u_char *) "nginx: ",
                     ngx_os_argv_last - ngx_os_argv[0]);
@@ -102,11 +104,12 @@ ngx_setproctitle(char *title)
         size += ngx_strlen(ngx_argv[i]) + 1;
     }
 
-    if (size > (size_t) ((char *) p - ngx_os_argv[0])) {
+    if (size > (size_t) ((char *) p - ngx_os_argv[0])) {	//title的长度比argv短
 
         /*
          * ngx_setproctitle() is too rare operation so we use
-         * the non-optimized copies
+         * the non-optimized copies、
+		 * argv+environ的连续内存现在 前面被title占用了，所有后移argv[i]
          */
 
         p = ngx_cpystrn(p, (u_char *) " (", ngx_os_argv_last - (char *) p);

@@ -103,7 +103,7 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
     sigemptyset(&set);
 
 
-    size = sizeof(master_process);
+    size = sizeof(master_process);	//"master process"
 
     for (i = 0; i < ngx_argc; i++) {
         size += ngx_strlen(ngx_argv[i]) + 1;
@@ -114,7 +114,8 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
         /* fatal */
         exit(2);
     }
-
+	
+	/*拷贝所有argv到title*/
     p = ngx_cpymem(title, master_process, sizeof(master_process) - 1);
     for (i = 0; i < ngx_argc; i++) {
         *p++ = ' ';
