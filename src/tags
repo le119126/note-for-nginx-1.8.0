@@ -2801,33 +2801,33 @@ __anon354::count	os/unix/ngx_os.h	/^    ngx_uint_t     count;$/;"	m	struct:__ano
 __anon354::iovs	os/unix/ngx_os.h	/^    struct iovec  *iovs;$/;"	m	struct:__anon354	typeref:struct:__anon354::iovec	access:public
 __anon354::nalloc	os/unix/ngx_os.h	/^    ngx_uint_t     nalloc;$/;"	m	struct:__anon354	access:public
 __anon354::size	os/unix/ngx_os.h	/^    size_t         size;$/;"	m	struct:__anon354	access:public
-__anon355::handler	os/unix/ngx_process.c	/^    void  (*handler)(int signo);$/;"	m	struct:__anon355	file:	access:public
-__anon355::name	os/unix/ngx_process.c	/^    char   *name;$/;"	m	struct:__anon355	file:	access:public
-__anon355::signame	os/unix/ngx_process.c	/^    char   *signame;$/;"	m	struct:__anon355	file:	access:public
-__anon355::signo	os/unix/ngx_process.c	/^    int     signo;$/;"	m	struct:__anon355	file:	access:public
-__anon356::channel	os/unix/ngx_process.h	/^    ngx_socket_t        channel[2];$/;"	m	struct:__anon356	access:public
-__anon356::data	os/unix/ngx_process.h	/^    void               *data;$/;"	m	struct:__anon356	access:public
-__anon356::detached	os/unix/ngx_process.h	/^    unsigned            detached:1;$/;"	m	struct:__anon356	access:public
-__anon356::exited	os/unix/ngx_process.h	/^    unsigned            exited:1;$/;"	m	struct:__anon356	access:public
-__anon356::exiting	os/unix/ngx_process.h	/^    unsigned            exiting:1;$/;"	m	struct:__anon356	access:public
-__anon356::just_spawn	os/unix/ngx_process.h	/^    unsigned            just_spawn:1;$/;"	m	struct:__anon356	access:public
-__anon356::name	os/unix/ngx_process.h	/^    char               *name;$/;"	m	struct:__anon356	access:public
-__anon356::pid	os/unix/ngx_process.h	/^    ngx_pid_t           pid;$/;"	m	struct:__anon356	access:public
-__anon356::proc	os/unix/ngx_process.h	/^    ngx_spawn_proc_pt   proc;$/;"	m	struct:__anon356	access:public
-__anon356::respawn	os/unix/ngx_process.h	/^    unsigned            respawn:1;$/;"	m	struct:__anon356	access:public
-__anon356::status	os/unix/ngx_process.h	/^    int                 status;$/;"	m	struct:__anon356	access:public
-__anon357::argv	os/unix/ngx_process.h	/^    char *const  *argv;$/;"	m	struct:__anon357	access:public
-__anon357::envp	os/unix/ngx_process.h	/^    char *const  *envp;$/;"	m	struct:__anon357	access:public
-__anon357::name	os/unix/ngx_process.h	/^    char         *name;$/;"	m	struct:__anon357	access:public
-__anon357::path	os/unix/ngx_process.h	/^    char         *path;$/;"	m	struct:__anon357	access:public
-__anon358::delay	os/unix/ngx_process_cycle.h	/^    ngx_msec_t                 delay;$/;"	m	struct:__anon358	access:public
-__anon358::handler	os/unix/ngx_process_cycle.h	/^    ngx_event_handler_pt       handler;$/;"	m	struct:__anon358	access:public
-__anon358::name	os/unix/ngx_process_cycle.h	/^    char                      *name;$/;"	m	struct:__anon358	access:public
-__anon359::addr	os/unix/ngx_shmem.h	/^    u_char      *addr;$/;"	m	struct:__anon359	access:public
-__anon359::exists	os/unix/ngx_shmem.h	/^    ngx_uint_t   exists;   \/* unsigned  exists:1;  *\/$/;"	m	struct:__anon359	access:public
-__anon359::log	os/unix/ngx_shmem.h	/^    ngx_log_t   *log;$/;"	m	struct:__anon359	access:public
-__anon359::name	os/unix/ngx_shmem.h	/^    ngx_str_t    name;$/;"	m	struct:__anon359	access:public
-__anon359::size	os/unix/ngx_shmem.h	/^    size_t       size;$/;"	m	struct:__anon359	access:public
+__anon355::channel	os/unix/ngx_process.h	/^    ngx_socket_t        channel[2];$/;"	m	struct:__anon355	access:public
+__anon355::data	os/unix/ngx_process.h	/^    void               *data;$/;"	m	struct:__anon355	access:public
+__anon355::detached	os/unix/ngx_process.h	/^    unsigned            detached:1;$/;"	m	struct:__anon355	access:public
+__anon355::exited	os/unix/ngx_process.h	/^    unsigned            exited:1;$/;"	m	struct:__anon355	access:public
+__anon355::exiting	os/unix/ngx_process.h	/^    unsigned            exiting:1;$/;"	m	struct:__anon355	access:public
+__anon355::just_spawn	os/unix/ngx_process.h	/^    unsigned            just_spawn:1;$/;"	m	struct:__anon355	access:public
+__anon355::name	os/unix/ngx_process.h	/^    char               *name;$/;"	m	struct:__anon355	access:public
+__anon355::pid	os/unix/ngx_process.h	/^    ngx_pid_t           pid;$/;"	m	struct:__anon355	access:public
+__anon355::proc	os/unix/ngx_process.h	/^    ngx_spawn_proc_pt   proc;$/;"	m	struct:__anon355	access:public
+__anon355::respawn	os/unix/ngx_process.h	/^    unsigned            respawn:1;$/;"	m	struct:__anon355	access:public
+__anon355::status	os/unix/ngx_process.h	/^    int                 status;$/;"	m	struct:__anon355	access:public
+__anon356::argv	os/unix/ngx_process.h	/^    char *const  *argv;$/;"	m	struct:__anon356	access:public
+__anon356::envp	os/unix/ngx_process.h	/^    char *const  *envp;$/;"	m	struct:__anon356	access:public
+__anon356::name	os/unix/ngx_process.h	/^    char         *name;$/;"	m	struct:__anon356	access:public
+__anon356::path	os/unix/ngx_process.h	/^    char         *path;$/;"	m	struct:__anon356	access:public
+__anon357::delay	os/unix/ngx_process_cycle.h	/^    ngx_msec_t                 delay;$/;"	m	struct:__anon357	access:public
+__anon357::handler	os/unix/ngx_process_cycle.h	/^    ngx_event_handler_pt       handler;$/;"	m	struct:__anon357	access:public
+__anon357::name	os/unix/ngx_process_cycle.h	/^    char                      *name;$/;"	m	struct:__anon357	access:public
+__anon358::addr	os/unix/ngx_shmem.h	/^    u_char      *addr;$/;"	m	struct:__anon358	access:public
+__anon358::exists	os/unix/ngx_shmem.h	/^    ngx_uint_t   exists;   \/* unsigned  exists:1;  *\/$/;"	m	struct:__anon358	access:public
+__anon358::log	os/unix/ngx_shmem.h	/^    ngx_log_t   *log;$/;"	m	struct:__anon358	access:public
+__anon358::name	os/unix/ngx_shmem.h	/^    ngx_str_t    name;$/;"	m	struct:__anon358	access:public
+__anon358::size	os/unix/ngx_shmem.h	/^    size_t       size;$/;"	m	struct:__anon358	access:public
+__anon359::handler	os/unix/ngx_process.c	/^    void  (*handler)(int signo);$/;"	m	struct:__anon359	file:	access:public
+__anon359::name	os/unix/ngx_process.c	/^    char   *name;$/;"	m	struct:__anon359	file:	access:public
+__anon359::signame	os/unix/ngx_process.c	/^    char   *signame;$/;"	m	struct:__anon359	file:	access:public
+__anon359::signo	os/unix/ngx_process.c	/^    int     signo;$/;"	m	struct:__anon359	file:	access:public
 __anon35::last	core/ngx_list.h	/^    ngx_list_part_t  *last;$/;"	m	struct:__anon35	access:public
 __anon35::nalloc	core/ngx_list.h	/^    ngx_uint_t        nalloc;$/;"	m	struct:__anon35	access:public
 __anon35::part	core/ngx_list.h	/^    ngx_list_part_t   part;$/;"	m	struct:__anon35	access:public
@@ -3227,7 +3227,7 @@ addr	http/ngx_http_upstream.h	/^    ngx_addr_t                      *addr;$/;"	m
 addr	mail/ngx_mail.h	/^    in_addr_t               addr;$/;"	m	struct:__anon324	access:public
 addr	mail/ngx_mail_auth_http_module.c	/^    ngx_str_t                       addr;$/;"	m	struct:ngx_mail_auth_http_ctx_s	file:	access:public
 addr	os/unix/ngx_files.h	/^    void                        *addr;$/;"	m	struct:__anon348	access:public
-addr	os/unix/ngx_shmem.h	/^    u_char      *addr;$/;"	m	struct:__anon359	access:public
+addr	os/unix/ngx_shmem.h	/^    u_char      *addr;$/;"	m	struct:__anon358	access:public
 addr6	core/ngx_resolver.h	/^        struct in6_addr       addr6;$/;"	m	union:__anon53::__anon55	typeref:struct:__anon53::__anon55::in6_addr	access:public
 addr6	core/ngx_resolver.h	/^    struct in6_addr           addr6;$/;"	m	struct:__anon53	typeref:struct:__anon53::in6_addr	access:public
 addr6	http/ngx_http_core_module.h	/^    struct in6_addr            addr6;$/;"	m	struct:__anon267	typeref:struct:__anon267::in6_addr	access:public
@@ -3300,7 +3300,7 @@ args	http/ngx_http_script.h	/^    unsigned                    args:1;$/;"	m	stru
 args	mail/ngx_mail.h	/^    ngx_array_t             args;$/;"	m	struct:__anon335	access:public
 args_start	http/ngx_http_request.h	/^    u_char                           *args_start;$/;"	m	struct:ngx_http_request_s	access:public
 argument_number	core/ngx_conf_file.c	/^static ngx_uint_t argument_number[] = {$/;"	v	file:
-argv	os/unix/ngx_process.h	/^    char *const  *argv;$/;"	m	struct:__anon357	access:public
+argv	os/unix/ngx_process.h	/^    char *const  *argv;$/;"	m	struct:__anon356	access:public
 auth_capability	mail/ngx_mail_pop3_module.h	/^    ngx_str_t    auth_capability;$/;"	m	struct:__anon340	access:public
 auth_method	mail/ngx_mail.h	/^    unsigned                auth_method:3;$/;"	m	struct:__anon335	access:public
 auth_methods	mail/ngx_mail_imap_module.h	/^    ngx_uint_t   auth_methods;$/;"	m	struct:__anon339	access:public
@@ -3495,7 +3495,7 @@ change_list	event/modules/ngx_kqueue_module.c	/^static struct kevent  *change_li
 changes	event/modules/ngx_devpoll_module.c	/^    ngx_uint_t      changes;$/;"	m	struct:__anon68	file:	access:public
 changes	event/modules/ngx_kqueue_module.c	/^    ngx_uint_t  changes;$/;"	m	struct:__anon72	file:	access:public
 channel	event/ngx_event.h	/^    unsigned         channel:1;$/;"	m	struct:ngx_event_s	access:public
-channel	os/unix/ngx_process.h	/^    ngx_socket_t        channel[2];$/;"	m	struct:__anon356	access:public
+channel	os/unix/ngx_process.h	/^    ngx_socket_t        channel[2];$/;"	m	struct:__anon355	access:public
 characters	http/modules/ngx_http_charset_filter_module.c	/^    ngx_uint_t                  characters;$/;"	m	struct:__anon96	file:	access:public
 charset	http/modules/ngx_http_charset_filter_module.c	/^    ngx_http_charset_t         *charset;$/;"	m	struct:__anon96	file:	access:public
 charset	http/modules/ngx_http_charset_filter_module.c	/^    ngx_int_t                   charset;$/;"	m	struct:__anon94	file:	access:public
@@ -3774,7 +3774,7 @@ data	http/ngx_http_script.h	/^    uintptr_t                   data;$/;"	m	struct
 data	http/ngx_http_upstream.h	/^    void                            *data;$/;"	m	struct:__anon306	access:public
 data	http/ngx_http_upstream_round_robin.h	/^    uintptr_t                       data;$/;"	m	struct:__anon316	access:public
 data	http/ngx_http_variables.h	/^    uintptr_t                     data;$/;"	m	struct:ngx_http_variable_s	access:public
-data	os/unix/ngx_process.h	/^    void               *data;$/;"	m	struct:__anon356	access:public
+data	os/unix/ngx_process.h	/^    void               *data;$/;"	m	struct:__anon355	access:public
 data_size	http/modules/ngx_http_geo_module.c	/^    size_t                           data_size;$/;"	m	struct:__anon127	file:	access:public
 date	http/ngx_http_cache.h	/^    time_t                           date;$/;"	m	struct:__anon250	access:public
 date	http/ngx_http_cache.h	/^    time_t                           date;$/;"	m	struct:ngx_http_cache_s	access:public
@@ -3801,7 +3801,7 @@ deferred_accept	http/ngx_http_core_module.h	/^    ngx_uint_t                 def
 degrade	http/modules/ngx_http_degradation_module.c	/^    ngx_uint_t  degrade;$/;"	m	struct:__anon112	file:	access:public
 del	event/ngx_event.h	/^    ngx_int_t  (*del)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);$/;"	m	struct:__anon75	access:public
 del_conn	event/ngx_event.h	/^    ngx_int_t  (*del_conn)(ngx_connection_t *c, ngx_uint_t flags);$/;"	m	struct:__anon75	access:public
-delay	os/unix/ngx_process_cycle.h	/^    ngx_msec_t                 delay;$/;"	m	struct:__anon358	access:public
+delay	os/unix/ngx_process_cycle.h	/^    ngx_msec_t                 delay;$/;"	m	struct:__anon357	access:public
 delay_log_level	http/modules/ngx_http_limit_req_module.c	/^    ngx_uint_t                   delay_log_level;$/;"	m	struct:__anon154	file:	access:public
 delayed	event/ngx_event.h	/^    unsigned         delayed:1;$/;"	m	struct:ngx_event_s	access:public
 delete_deferred	core/ngx_connection.h	/^    unsigned            delete_deferred:1;$/;"	m	struct:ngx_listening_s	access:public
@@ -3813,7 +3813,7 @@ deny	http/modules/ngx_http_access_module.c	/^    ngx_uint_t        deny;      \/
 depth	http/ngx_http_request.h	/^    ngx_table_elt_t                  *depth;$/;"	m	struct:__anon277	access:public
 destination	http/ngx_http_request.h	/^    ngx_table_elt_t                  *destination;$/;"	m	struct:__anon277	access:public
 destroyed	core/ngx_connection.h	/^    unsigned            destroyed:1;$/;"	m	struct:ngx_connection_s	access:public
-detached	os/unix/ngx_process.h	/^    unsigned            detached:1;$/;"	m	struct:__anon356	access:public
+detached	os/unix/ngx_process.h	/^    unsigned            detached:1;$/;"	m	struct:__anon355	access:public
 devpoll_name	event/modules/ngx_devpoll_module.c	/^static ngx_str_t      devpoll_name = ngx_string("\/dev\/poll");$/;"	v	file:
 dhparam	http/modules/ngx_http_ssl_module.h	/^    ngx_str_t                       dhparam;$/;"	m	struct:__anon224	access:public
 dhparam	mail/ngx_mail_ssl_module.h	/^    ngx_str_t        dhparam;$/;"	m	struct:__anon343	access:public
@@ -3926,7 +3926,7 @@ entries	http/modules/ngx_http_mp4_module.c	/^    u_char    entries[4];$/;"	m	str
 entries	http/ngx_http_spdy.h	/^    ngx_uint_t                       entries;$/;"	m	struct:ngx_http_spdy_connection_s	access:public
 env	core/ngx_cycle.h	/^     ngx_array_t              env;$/;"	m	struct:__anon14	access:public
 environment	core/ngx_cycle.h	/^     char                   **environment;$/;"	m	struct:__anon14	access:public
-envp	os/unix/ngx_process.h	/^    char *const  *envp;$/;"	m	struct:__anon357	access:public
+envp	os/unix/ngx_process.h	/^    char *const  *envp;$/;"	m	struct:__anon356	access:public
 eof	event/ngx_event.h	/^    unsigned         eof:1;$/;"	m	struct:ngx_event_s	access:public
 ep	event/modules/ngx_epoll_module.c	/^static int                  ep = -1;$/;"	v	file:
 ep	event/modules/ngx_eventport_module.c	/^static int            ep = -1;$/;"	v	file:
@@ -4012,12 +4012,12 @@ exists	http/ngx_http_cache.h	/^    unsigned                         exists:1;$/;
 exists	http/ngx_http_cache.h	/^    unsigned                         exists:1;$/;"	m	struct:ngx_http_cache_s	access:public
 exists	os/unix/ngx_darwin_init.c	/^    ngx_uint_t   exists;$/;"	m	struct:__anon346	file:	access:public
 exists	os/unix/ngx_freebsd_init.c	/^    ngx_uint_t   exists;$/;"	m	struct:__anon351	file:	access:public
-exists	os/unix/ngx_shmem.h	/^    ngx_uint_t   exists;   \/* unsigned  exists:1;  *\/$/;"	m	struct:__anon359	access:public
+exists	os/unix/ngx_shmem.h	/^    ngx_uint_t   exists;   \/* unsigned  exists:1;  *\/$/;"	m	struct:__anon358	access:public
 exit_master	core/ngx_conf_file.h	/^    void                (*exit_master)(ngx_cycle_t *cycle);$/;"	m	struct:ngx_module_s	access:public
 exit_process	core/ngx_conf_file.h	/^    void                (*exit_process)(ngx_cycle_t *cycle);$/;"	m	struct:ngx_module_s	access:public
 exit_thread	core/ngx_conf_file.h	/^    void                (*exit_thread)(ngx_cycle_t *cycle);$/;"	m	struct:ngx_module_s	access:public
-exited	os/unix/ngx_process.h	/^    unsigned            exited:1;$/;"	m	struct:__anon356	access:public
-exiting	os/unix/ngx_process.h	/^    unsigned            exiting:1;$/;"	m	struct:__anon356	access:public
+exited	os/unix/ngx_process.h	/^    unsigned            exited:1;$/;"	m	struct:__anon355	access:public
+exiting	os/unix/ngx_process.h	/^    unsigned            exiting:1;$/;"	m	struct:__anon355	access:public
 expect	http/ngx_http_request.h	/^    ngx_table_elt_t                  *expect;$/;"	m	struct:__anon277	access:public
 expect_tested	http/ngx_http_request.h	/^    unsigned                          expect_tested:1;$/;"	m	struct:ngx_http_request_s	access:public
 expire	core/ngx_resolver.h	/^    time_t                    expire;$/;"	m	struct:__anon53	access:public
@@ -4244,8 +4244,8 @@ handler	http/ngx_http_spdy.h	/^    ngx_http_spdy_handler_pt         handler;$/;"
 handler	http/ngx_http_spdy.h	/^    ngx_int_t                      (*handler)(ngx_http_spdy_connection_t *sc,$/;"	m	struct:ngx_http_spdy_out_frame_s	access:public
 handler	http/ngx_http_upstream.h	/^    ngx_http_header_handler_pt       handler;$/;"	m	struct:__anon310	access:public
 handler	mail/ngx_mail_auth_http_module.c	/^    ngx_mail_auth_http_handler_pt   handler;$/;"	m	struct:ngx_mail_auth_http_ctx_s	file:	access:public
-handler	os/unix/ngx_process.c	/^    void  (*handler)(int signo);$/;"	m	struct:__anon355	file:	access:public
-handler	os/unix/ngx_process_cycle.h	/^    ngx_event_handler_pt       handler;$/;"	m	struct:__anon358	access:public
+handler	os/unix/ngx_process.c	/^    void  (*handler)(int signo);$/;"	m	struct:__anon359	file:	access:public
+handler	os/unix/ngx_process_cycle.h	/^    ngx_event_handler_pt       handler;$/;"	m	struct:__anon357	access:public
 handler_conf	core/ngx_conf_file.h	/^    char                 *handler_conf;$/;"	m	struct:ngx_conf_s	access:public
 handlers	http/ngx_http_core_module.h	/^    ngx_array_t                handlers;$/;"	m	struct:__anon261	access:public
 handlers	http/ngx_http_core_module.h	/^    ngx_http_phase_handler_t  *handlers;$/;"	m	struct:__anon260	access:public
@@ -4486,7 +4486,7 @@ itimerspec::it_value	event/modules/ngx_eventport_module.c	/^    struct timespec 
 itimerspec_t	event/modules/ngx_eventport_module.c	/^} itimerspec_t;$/;"	t	typeref:struct:itimerspec	file:
 jpeg_quality	http/modules/ngx_http_image_filter_module.c	/^    ngx_uint_t                   jpeg_quality;$/;"	m	struct:__anon141	file:	access:public
 jqcv	http/modules/ngx_http_image_filter_module.c	/^    ngx_http_complex_value_t    *jqcv;$/;"	m	struct:__anon141	file:	access:public
-just_spawn	os/unix/ngx_process.h	/^    unsigned            just_spawn:1;$/;"	m	struct:__anon356	access:public
+just_spawn	os/unix/ngx_process.h	/^    unsigned            just_spawn:1;$/;"	m	struct:__anon355	access:public
 keep_alive	http/ngx_http_request.h	/^    ngx_table_elt_t                  *keep_alive;$/;"	m	struct:__anon277	access:public
 keep_alive_n	http/ngx_http_request.h	/^    time_t                            keep_alive_n;$/;"	m	struct:__anon277	access:public
 keep_conn	http/modules/ngx_http_fastcgi_module.c	/^    ngx_flag_t                     keep_conn;$/;"	m	struct:__anon115	file:	access:public
@@ -4703,7 +4703,7 @@ log	http/modules/ngx_http_rewrite_module.c	/^    ngx_flag_t    log;$/;"	m	struct
 log	http/ngx_http_script.h	/^    unsigned                    log:1;$/;"	m	struct:__anon283	access:public
 log	os/unix/ngx_files.h	/^    ngx_log_t                   *log;$/;"	m	struct:__anon348	access:public
 log	os/unix/ngx_files.h	/^    ngx_log_t                   *log;$/;"	m	struct:__anon350	access:public
-log	os/unix/ngx_shmem.h	/^    ngx_log_t   *log;$/;"	m	struct:__anon359	access:public
+log	os/unix/ngx_shmem.h	/^    ngx_log_t   *log;$/;"	m	struct:__anon358	access:public
 log_ctx	core/ngx_slab.h	/^    u_char           *log_ctx;$/;"	m	struct:__anon59	access:public
 log_error	core/ngx_connection.h	/^    unsigned            log_error:3;     \/* ngx_connection_log_error_e *\/$/;"	m	struct:ngx_connection_s	access:public
 log_error	event/ngx_event_connect.h	/^    unsigned                         log_error:2;$/;"	m	struct:ngx_peer_connection_s	access:public
@@ -4941,11 +4941,11 @@ name	mail/ngx_mail.h	/^    ngx_str_t                   name;$/;"	m	struct:ngx_ma
 name	os/unix/ngx_darwin_init.c	/^    char        *name;$/;"	m	struct:__anon346	file:	access:public
 name	os/unix/ngx_files.h	/^    u_char                      *name;$/;"	m	struct:__anon348	access:public
 name	os/unix/ngx_freebsd_init.c	/^    char        *name;$/;"	m	struct:__anon351	file:	access:public
-name	os/unix/ngx_process.c	/^    char   *name;$/;"	m	struct:__anon355	file:	access:public
-name	os/unix/ngx_process.h	/^    char               *name;$/;"	m	struct:__anon356	access:public
-name	os/unix/ngx_process.h	/^    char         *name;$/;"	m	struct:__anon357	access:public
-name	os/unix/ngx_process_cycle.h	/^    char                      *name;$/;"	m	struct:__anon358	access:public
-name	os/unix/ngx_shmem.h	/^    ngx_str_t    name;$/;"	m	struct:__anon359	access:public
+name	os/unix/ngx_process.c	/^    char   *name;$/;"	m	struct:__anon359	file:	access:public
+name	os/unix/ngx_process.h	/^    char               *name;$/;"	m	struct:__anon355	access:public
+name	os/unix/ngx_process.h	/^    char         *name;$/;"	m	struct:__anon356	access:public
+name	os/unix/ngx_process_cycle.h	/^    char                      *name;$/;"	m	struct:__anon357	access:public
+name	os/unix/ngx_shmem.h	/^    ngx_str_t    name;$/;"	m	struct:__anon358	access:public
 name_expire_queue	core/ngx_resolver.h	/^    ngx_queue_t               name_expire_queue;$/;"	m	struct:__anon56	access:public
 name_rbtree	core/ngx_resolver.h	/^    ngx_rbtree_t              name_rbtree;$/;"	m	struct:__anon56	access:public
 name_resend_queue	core/ngx_resolver.h	/^    ngx_queue_t               name_resend_queue;$/;"	m	struct:__anon56	access:public
@@ -5200,7 +5200,7 @@ ngx_cache_loader_ctx	os/unix/ngx_process_cycle.c	/^static ngx_cache_manager_ctx_
 ngx_cache_loader_process_handler	os/unix/ngx_process_cycle.c	/^ngx_cache_loader_process_handler(ngx_event_t *ev)$/;"	f	file:	signature:(ngx_event_t *ev)
 ngx_cache_loader_process_handler	os/unix/ngx_process_cycle.c	/^static void ngx_cache_loader_process_handler(ngx_event_t *ev);$/;"	p	file:	signature:(ngx_event_t *ev)
 ngx_cache_manager_ctx	os/unix/ngx_process_cycle.c	/^static ngx_cache_manager_ctx_t  ngx_cache_manager_ctx = {$/;"	v	file:
-ngx_cache_manager_ctx_t	os/unix/ngx_process_cycle.h	/^} ngx_cache_manager_ctx_t;$/;"	t	typeref:struct:__anon358
+ngx_cache_manager_ctx_t	os/unix/ngx_process_cycle.h	/^} ngx_cache_manager_ctx_t;$/;"	t	typeref:struct:__anon357
 ngx_cache_manager_process_cycle	os/unix/ngx_process_cycle.c	/^ngx_cache_manager_process_cycle(ngx_cycle_t *cycle, void *data)$/;"	f	file:	signature:(ngx_cycle_t *cycle, void *data)
 ngx_cache_manager_process_cycle	os/unix/ngx_process_cycle.c	/^static void ngx_cache_manager_process_cycle(ngx_cycle_t *cycle, void *data);$/;"	p	file:	signature:(ngx_cycle_t *cycle, void *data)
 ngx_cache_manager_process_handler	os/unix/ngx_process_cycle.c	/^ngx_cache_manager_process_handler(ngx_event_t *ev)$/;"	f	file:	signature:(ngx_event_t *ev)
@@ -5917,7 +5917,7 @@ ngx_events_block	event/ngx_event.c	/^static char *ngx_events_block(ngx_conf_t *c
 ngx_events_commands	event/ngx_event.c	/^static ngx_command_t  ngx_events_commands[] = {$/;"	v	file:
 ngx_events_module	event/ngx_event.c	/^ngx_module_t  ngx_events_module = {$/;"	v
 ngx_events_module_ctx	event/ngx_event.c	/^static ngx_core_module_t  ngx_events_module_ctx = {$/;"	v	file:
-ngx_exec_ctx_t	os/unix/ngx_process.h	/^} ngx_exec_ctx_t;$/;"	t	typeref:struct:__anon357
+ngx_exec_ctx_t	os/unix/ngx_process.h	/^} ngx_exec_ctx_t;$/;"	t	typeref:struct:__anon356
 ngx_exec_new_binary	core/nginx.c	/^ngx_exec_new_binary(ngx_cycle_t *cycle, char *const *argv)$/;"	f	signature:(ngx_cycle_t *cycle, char *const *argv)
 ngx_exec_new_binary	core/ngx_cycle.h	/^ngx_pid_t ngx_exec_new_binary(ngx_cycle_t *cycle, char *const *argv);$/;"	p	signature:(ngx_cycle_t *cycle, char *const *argv)
 ngx_execute	os/unix/ngx_process.c	/^ngx_execute(ngx_cycle_t *cycle, ngx_exec_ctx_t *ctx)$/;"	f	signature:(ngx_cycle_t *cycle, ngx_exec_ctx_t *ctx)
@@ -10227,7 +10227,7 @@ ngx_openssl_module	event/ngx_event_openssl.c	/^ngx_module_t  ngx_openssl_module 
 ngx_openssl_module_ctx	event/ngx_event_openssl.c	/^static ngx_core_module_t  ngx_openssl_module_ctx = {$/;"	v	file:
 ngx_os_aio	event/modules/ngx_aio_module.c	/^ngx_os_io_t ngx_os_aio = {$/;"	v
 ngx_os_argv	os/unix/ngx_process.c	/^char           **ngx_os_argv;$/;"	v
-ngx_os_argv_last	os/unix/ngx_setproctitle.c	/^static char *ngx_os_argv_last;$/;"	v	file:
+ngx_os_argv_last	os/unix/ngx_setproctitle.c	/^static char *ngx_os_argv_last;	\/\/指向argv+environ连续内存的最后一个位置$/;"	v	file:
 ngx_os_environ	core/nginx.c	/^static char **ngx_os_environ;$/;"	v	file:
 ngx_os_init	os/unix/ngx_os.h	/^ngx_int_t ngx_os_init(ngx_log_t *log);$/;"	p	signature:(ngx_log_t *log)
 ngx_os_init	os/unix/ngx_posix_init.c	/^ngx_os_init(ngx_log_t *log)$/;"	f	signature:(ngx_log_t *log)
@@ -10417,7 +10417,7 @@ ngx_process_get_status	os/unix/ngx_process.c	/^static void ngx_process_get_statu
 ngx_process_options	core/nginx.c	/^ngx_process_options(ngx_cycle_t *cycle)$/;"	f	file:	signature:(ngx_cycle_t *cycle)
 ngx_process_options	core/nginx.c	/^static ngx_int_t ngx_process_options(ngx_cycle_t *cycle);$/;"	p	file:	signature:(ngx_cycle_t *cycle)
 ngx_process_slot	os/unix/ngx_process.c	/^ngx_int_t        ngx_process_slot;$/;"	v
-ngx_process_t	os/unix/ngx_process.h	/^} ngx_process_t;$/;"	t	typeref:struct:__anon356
+ngx_process_t	os/unix/ngx_process.h	/^} ngx_process_t;$/;"	t	typeref:struct:__anon355
 ngx_processes	os/unix/ngx_process.c	/^ngx_process_t    ngx_processes[NGX_MAX_PROCESSES];$/;"	v
 ngx_proxy_protocol_parse	core/ngx_proxy_protocol.c	/^ngx_proxy_protocol_parse(ngx_connection_t *c, u_char *buf, u_char *last)$/;"	f	signature:(ngx_connection_t *c, u_char *buf, u_char *last)
 ngx_proxy_protocol_parse	core/ngx_proxy_protocol.h	/^u_char *ngx_proxy_protocol_parse(ngx_connection_t *c, u_char *buf,$/;"	p	signature:(ngx_connection_t *c, u_char *buf, u_char *last)
@@ -10782,7 +10782,7 @@ ngx_shm_alloc	os/unix/ngx_shmem.c	/^ngx_shm_alloc(ngx_shm_t *shm)$/;"	f	signatur
 ngx_shm_alloc	os/unix/ngx_shmem.h	/^ngx_int_t ngx_shm_alloc(ngx_shm_t *shm);$/;"	p	signature:(ngx_shm_t *shm)
 ngx_shm_free	os/unix/ngx_shmem.c	/^ngx_shm_free(ngx_shm_t *shm)$/;"	f	signature:(ngx_shm_t *shm)
 ngx_shm_free	os/unix/ngx_shmem.h	/^void ngx_shm_free(ngx_shm_t *shm);$/;"	p	signature:(ngx_shm_t *shm)
-ngx_shm_t	os/unix/ngx_shmem.h	/^} ngx_shm_t;$/;"	t	typeref:struct:__anon359
+ngx_shm_t	os/unix/ngx_shmem.h	/^} ngx_shm_t;$/;"	t	typeref:struct:__anon358
 ngx_shm_zone_init_pt	core/ngx_cycle.h	/^typedef ngx_int_t (*ngx_shm_zone_init_pt) (ngx_shm_zone_t *zone, void *data);$/;"	t
 ngx_shm_zone_s	core/ngx_cycle.h	/^struct ngx_shm_zone_s {$/;"	s
 ngx_shm_zone_s::data	core/ngx_cycle.h	/^    void                     *data;$/;"	m	struct:ngx_shm_zone_s	access:public
@@ -10819,7 +10819,7 @@ ngx_signal_handler	os/unix/ngx_process.c	/^static void ngx_signal_handler(int si
 ngx_signal_helper	core/ngx_config.h	54;"	d
 ngx_signal_process	core/ngx_cycle.c	/^ngx_signal_process(ngx_cycle_t *cycle, char *sig)$/;"	f	signature:(ngx_cycle_t *cycle, char *sig)
 ngx_signal_process	core/ngx_cycle.h	/^ngx_int_t ngx_signal_process(ngx_cycle_t *cycle, char *sig);$/;"	p	signature:(ngx_cycle_t *cycle, char *sig)
-ngx_signal_t	os/unix/ngx_process.c	/^} ngx_signal_t;$/;"	t	typeref:struct:__anon355	file:
+ngx_signal_t	os/unix/ngx_process.c	/^} ngx_signal_t;$/;"	t	typeref:struct:__anon359	file:
 ngx_signal_value	core/ngx_config.h	55;"	d
 ngx_signal_worker_processes	os/unix/ngx_process_cycle.c	/^ngx_signal_worker_processes(ngx_cycle_t *cycle, int signo)$/;"	f	file:	signature:(ngx_cycle_t *cycle, int signo)
 ngx_signal_worker_processes	os/unix/ngx_process_cycle.c	/^static void ngx_signal_worker_processes(ngx_cycle_t *cycle, int signo);$/;"	p	file:	signature:(ngx_cycle_t *cycle, int signo)
@@ -11630,7 +11630,7 @@ path	core/ngx_file.h	/^    ngx_path_t                *path;$/;"	m	struct:__anon1
 path	http/modules/ngx_http_dav_module.c	/^    ngx_str_t   path;$/;"	m	struct:__anon110	file:	access:public
 path	http/modules/ngx_http_userid_filter_module.c	/^    ngx_str_t   path;$/;"	m	struct:__anon237	file:	access:public
 path	http/ngx_http_cache.h	/^    ngx_path_t                      *path;$/;"	m	struct:ngx_http_file_cache_s	access:public
-path	os/unix/ngx_process.h	/^    char         *path;$/;"	m	struct:__anon357	access:public
+path	os/unix/ngx_process.h	/^    char         *path;$/;"	m	struct:__anon356	access:public
 path_access	core/ngx_file.h	/^    ngx_uint_t                 path_access;$/;"	m	struct:__anon19	access:public
 path_info	http/modules/ngx_http_fastcgi_module.c	/^    ngx_str_t                      path_info;$/;"	m	struct:__anon118	file:	access:public
 paths	core/ngx_cycle.h	/^    ngx_array_t               paths;$/;"	m	struct:ngx_cycle_s	access:public
@@ -11658,7 +11658,7 @@ phase_handler	http/ngx_http_request.h	/^    ngx_int_t                         ph
 phases	http/ngx_http_core_module.h	/^    ngx_http_phase_t           phases[NGX_HTTP_LOG_PHASE + 1];$/;"	m	struct:__anon262	access:public
 pid	core/ngx_cycle.h	/^     ngx_str_t                pid;$/;"	m	struct:__anon14	access:public
 pid	os/unix/ngx_channel.h	/^     ngx_pid_t   pid;$/;"	m	struct:__anon345	access:public
-pid	os/unix/ngx_process.h	/^    ngx_pid_t           pid;$/;"	m	struct:__anon356	access:public
+pid	os/unix/ngx_process.h	/^    ngx_pid_t           pid;$/;"	m	struct:__anon355	access:public
 pipe	http/ngx_http_upstream.h	/^    ngx_event_pipe_t                *pipe;$/;"	m	struct:ngx_http_upstream_s	access:public
 pipeline	http/ngx_http_request.h	/^    unsigned                          pipeline:1;$/;"	m	struct:ngx_http_request_s	access:public
 plus_in_uri	http/ngx_http_request.h	/^    unsigned                          plus_in_uri:1;$/;"	m	struct:ngx_http_request_s	access:public
@@ -11777,7 +11777,7 @@ previous	core/ngx_connection.h	/^    ngx_listening_t    *previous;$/;"	m	struct:
 priority	core/ngx_cycle.h	/^     int                      priority;$/;"	m	struct:__anon14	access:public
 priority	http/ngx_http_spdy.h	/^    ngx_uint_t                       priority;$/;"	m	struct:ngx_http_spdy_out_frame_s	access:public
 priority	http/ngx_http_spdy.h	/^    unsigned                         priority:3;$/;"	m	struct:ngx_http_spdy_stream_s	access:public
-proc	os/unix/ngx_process.h	/^    ngx_spawn_proc_pt   proc;$/;"	m	struct:__anon356	access:public
+proc	os/unix/ngx_process.h	/^    ngx_spawn_proc_pt   proc;$/;"	m	struct:__anon355	access:public
 process	event/ngx_event_openssl_stapling.c	/^    ngx_int_t                  (*process)(ngx_ssl_ocsp_ctx_t *r);$/;"	m	struct:ngx_ssl_ocsp_ctx_s	file:	access:public
 process_events	event/ngx_event.h	/^    ngx_int_t  (*process_events)(ngx_cycle_t *cycle, ngx_msec_t timer,$/;"	m	struct:__anon75	access:public
 process_header	http/ngx_http_upstream.h	/^    ngx_int_t                      (*process_header)(ngx_http_request_t *r);$/;"	m	struct:ngx_http_upstream_s	access:public
@@ -11967,7 +11967,7 @@ resolver_timeout	event/ngx_event_openssl_stapling.c	/^    ngx_msec_t            
 resolver_timeout	event/ngx_event_openssl_stapling.c	/^    ngx_msec_t                   resolver_timeout;$/;"	m	struct:ngx_ssl_ocsp_ctx_s	file:	access:public
 resolver_timeout	http/ngx_http_core_module.h	/^    ngx_msec_t    resolver_timeout;        \/* resolver_timeout *\/$/;"	m	struct:ngx_http_core_loc_conf_s	access:public
 resolver_timeout	mail/ngx_mail.h	/^    ngx_msec_t              resolver_timeout;$/;"	m	struct:__anon330	access:public
-respawn	os/unix/ngx_process.h	/^    unsigned            respawn:1;$/;"	m	struct:__anon356	access:public
+respawn	os/unix/ngx_process.h	/^    unsigned            respawn:1;$/;"	m	struct:__anon355	access:public
 response	event/ngx_event_openssl_stapling.c	/^    ngx_buf_t                   *response;$/;"	m	struct:ngx_ssl_ocsp_ctx_s	file:	access:public
 response	mail/ngx_mail_auth_http_module.c	/^    ngx_buf_t                      *response;$/;"	m	struct:ngx_mail_auth_http_ctx_s	file:	access:public
 response_length	http/ngx_http_upstream.h	/^    off_t                            response_length;$/;"	m	struct:__anon304	access:public
@@ -12148,11 +12148,11 @@ si_fd	event/modules/ngx_rtsig_module.c	18;"	d	file:
 si_fd	event/modules/ngx_rtsig_module.c	23;"	d	file:
 si_fd	event/modules/ngx_rtsig_module.c	26;"	d	file:
 signals	os/unix/ngx_process.c	/^ngx_signal_t  signals[] = {$/;"	v
-signame	os/unix/ngx_process.c	/^    char   *signame;$/;"	m	struct:__anon355	file:	access:public
+signame	os/unix/ngx_process.c	/^    char   *signame;$/;"	m	struct:__anon359	file:	access:public
 signature	http/ngx_http_request.h	/^    uint32_t                          signature;         \/* "HTTP" *\/$/;"	m	struct:ngx_http_request_s	access:public
 signature	mail/ngx_mail.h	/^    uint32_t                signature;         \/* "MAIL" *\/$/;"	m	struct:__anon335	access:public
 signo	event/modules/ngx_rtsig_module.c	/^    ngx_uint_t  signo;$/;"	m	struct:__anon73	file:	access:public
-signo	os/unix/ngx_process.c	/^    int     signo;$/;"	m	struct:__anon355	file:	access:public
+signo	os/unix/ngx_process.c	/^    int     signo;$/;"	m	struct:__anon359	file:	access:public
 sigtimedwait	event/modules/ngx_rtsig_module.c	/^int sigtimedwait(const sigset_t *set, siginfo_t *info,$/;"	f	signature:(const sigset_t *set, siginfo_t *info, const struct timespec *timeout)
 sigtimedwait	event/modules/ngx_rtsig_module.c	/^int sigtimedwait(const sigset_t *set, siginfo_t *info,$/;"	p	file:	signature:(const sigset_t *set, siginfo_t *info, const struct timespec *timeout)
 silent_errors	http/modules/ngx_http_ssi_filter_module.c	/^    ngx_flag_t    silent_errors;$/;"	m	struct:__anon211	file:	access:public
@@ -12197,7 +12197,7 @@ size	os/unix/ngx_files.h	/^    size_t                       size;$/;"	m	struct:_
 size	os/unix/ngx_freebsd_init.c	/^    size_t       size;$/;"	m	struct:__anon351	file:	access:public
 size	os/unix/ngx_linux_sendfile_chain.c	/^    size_t         size;$/;"	m	struct:__anon352	file:	access:public
 size	os/unix/ngx_os.h	/^    size_t         size;$/;"	m	struct:__anon354	access:public
-size	os/unix/ngx_shmem.h	/^    size_t       size;$/;"	m	struct:__anon359	access:public
+size	os/unix/ngx_shmem.h	/^    size_t       size;$/;"	m	struct:__anon358	access:public
 size64	http/modules/ngx_http_mp4_module.c	/^    u_char    size64[8];$/;"	m	struct:__anon173	file:	access:public
 skip	http/modules/ngx_http_browser_module.c	/^    size_t                      skip;$/;"	m	struct:__anon104	file:	access:public
 skip	http/modules/ngx_http_browser_module.c	/^    size_t                      skip;$/;"	m	struct:__anon105	file:	access:public
@@ -12416,7 +12416,7 @@ status	http/ngx_http_script.h	/^    uintptr_t                   status;$/;"	m	st
 status	http/ngx_http_upstream.h	/^    ngx_table_elt_t                 *status;$/;"	m	struct:__anon311	access:public
 status	http/ngx_http_upstream.h	/^    ngx_uint_t                       status;$/;"	m	struct:__anon304	access:public
 status	http/ngx_http_upstream.h	/^    ngx_uint_t                      status;$/;"	m	struct:__anon313	access:public
-status	os/unix/ngx_process.h	/^    int                 status;$/;"	m	struct:__anon356	access:public
+status	os/unix/ngx_process.h	/^    int                 status;$/;"	m	struct:__anon355	access:public
 status_code	http/modules/ngx_http_limit_conn_module.c	/^    ngx_uint_t                 status_code;$/;"	m	struct:__anon149	file:	access:public
 status_code	http/modules/ngx_http_limit_req_module.c	/^    ngx_uint_t                   status_code;$/;"	m	struct:__anon154	file:	access:public
 status_line	http/ngx_http_request.h	/^    ngx_str_t                         status_line;$/;"	m	struct:__anon278	access:public

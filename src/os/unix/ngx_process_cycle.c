@@ -126,18 +126,20 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
 
 
     ccf = (ngx_core_conf_t *) ngx_get_conf(cycle->conf_ctx, ngx_core_module);
-
+	
+	// worker_processes 子进程个数,NGX_PROCESS_RESPAWN 类型
     ngx_start_worker_processes(cycle, ccf->worker_processes,
                                NGX_PROCESS_RESPAWN);
-    ngx_start_cache_manager_processes(cycle, 0);
+    ngx_start_cache_manager_processes(cycle, 0);	//启动 缓存索引重建以及管理 进程
 
     ngx_new_binary = 0;
     delay = 0;
     sigio = 0;
     live = 1;
 
+	//循环处理信号
     for ( ;; ) {
-        if (delay) {
+        if (delay) {	//等待工作进程退出的时间
             if (ngx_sigalrm) {
                 sigio = 0;
                 delay *= 2;
@@ -147,7 +149,8 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
             ngx_log_debug1(NGX_LOG_DEBUG_EVENT, cycle->log, 0,
                            "termination cycle: %d", delay);
 
-            itv.it_interval.tv_sec = 0;
+			//根据delay设置定时器
+            itv.it_interval.tv_sec = 0;	
             itv.it_interval.tv_usec = 0;
             itv.it_value.tv_sec = delay / 1000;
             itv.it_value.tv_usec = (delay % 1000 ) * 1000;
@@ -160,18 +163,18 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
 
         ngx_log_debug0(NGX_LOG_DEBUG_EVENT, cycle->log, 0, "sigsuspend");
 
-        sigsuspend(&set);
+        sigsuspend(&set);	//进程挂起，直到收到set之外的信号唤醒
 
         ngx_time_update();
 
         ngx_log_debug1(NGX_LOG_DEBUG_EVENT, cycle->log, 0,
                        "wake up, sigio %i", sigio);
 
-        if (ngx_reap) {
+        if (ngx_reap) {		//是否重启工作进程
             ngx_reap = 0;
             ngx_log_debug0(NGX_LOG_DEBUG_EVENT, cycle->log, 0, "reap children");
 
-            live = ngx_reap_children(cycle);
+            live = ngx_reap_children(cycle);	//回收子进程
         }
 
         if (!live && (ngx_terminate || ngx_quit)) {
@@ -345,7 +348,7 @@ static void
 ngx_start_worker_processes(ngx_cycle_t *cycle, ngx_int_t n, ngx_int_t type)
 {
     ngx_int_t      i;
-    ngx_channel_t  ch;
+    ngx_channel_t  ch;	//父子进程通信通道
 
     ngx_log_error(NGX_LOG_NOTICE, cycle->log, 0, "start worker processes");
 
@@ -354,19 +357,19 @@ ngx_start_worker_processes(ngx_cycle_t *cycle, ngx_int_t n, ngx_int_t type)
     ch.command = NGX_CMD_OPEN_CHANNEL;
 
     for (i = 0; i < n; i++) {
-
+		//完成工作进程的创建
         ngx_spawn_process(cycle, ngx_worker_process_cycle,
                           (void *) (intptr_t) i, "worker process", type);
 
         ch.pid = ngx_processes[ngx_process_slot].pid;
-        ch.slot = ngx_process_slot;
+        ch.slot = ngx_process_slot;//全局变量，当前进程在worker_processes数组中的位置
         ch.fd = ngx_processes[ngx_process_slot].channel[0];
 
         ngx_pass_open_channel(cycle, &ch);
     }
 }
 
-
+//缓存重建进程，运行时间短，用于遍历磁盘上的缓存数据，在内存中重建数据索引
 static void
 ngx_start_cache_manager_processes(ngx_cycle_t *cycle, ngx_uint_t respawn)
 {
@@ -393,6 +396,7 @@ ngx_start_cache_manager_processes(ngx_cycle_t *cycle, ngx_uint_t respawn)
         return;
     }
 
+	//创建缓存索引管理进程
     ngx_spawn_process(cycle, ngx_cache_manager_process_cycle,
                       &ngx_cache_manager_ctx, "cache manager process",
                       respawn ? NGX_PROCESS_JUST_RESPAWN : NGX_PROCESS_RESPAWN);
@@ -730,6 +734,7 @@ ngx_worker_process_cycle(ngx_cycle_t *cycle, void *data)
 
     ngx_uint_t         i;
     ngx_connection_t  *c;
+
 
     ngx_process = NGX_PROCESS_WORKER;
 

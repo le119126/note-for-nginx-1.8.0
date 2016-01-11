@@ -1,5 +1,4 @@
 ./core/ngx_array.c
-./core/nginx.c
 ./core/nginx.h
 ./core/ngx_conf_file.c
 ./core/ngx_array.h
@@ -65,6 +64,7 @@
 ./core/ngx_thread_pool.h
 ./core/ngx_times.c
 ./core/ngx_times.h
+./core/nginx.c
 ./core/.nginx.c.swp
 ./event/modules/ngx_devpoll_module.c
 ./event/modules/ngx_aio_module.c
@@ -232,16 +232,13 @@
 ./os/unix/ngx_os.h
 ./os/unix/ngx_solaris_config.h
 ./os/unix/ngx_posix_init.c
-./os/unix/ngx_process.c
 ./os/unix/ngx_process.h
-./os/unix/ngx_process_cycle.c
 ./os/unix/ngx_process_cycle.h
 ./os/unix/ngx_readv_chain.c
 ./os/unix/ngx_recv.c
 ./os/unix/ngx_send.c
 ./os/unix/ngx_setaffinity.c
 ./os/unix/ngx_setaffinity.h
-./os/unix/ngx_setproctitle.c
 ./os/unix/ngx_setproctitle.h
 ./os/unix/ngx_shmem.c
 ./os/unix/ngx_shmem.h
@@ -264,5 +261,8 @@
 ./os/unix/ngx_writev_chain.c
 ./os/unix/ngx_user.c
 ./os/unix/ngx_user.h
+./os/unix/ngx_setproctitle.c
+./os/unix/ngx_process.c
+./os/unix/ngx_process_cycle.c
 ./tags
 ./cscope.files
