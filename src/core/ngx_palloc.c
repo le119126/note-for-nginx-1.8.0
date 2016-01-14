@@ -18,20 +18,20 @@ ngx_create_pool(size_t size, ngx_log_t *log)
 {
     ngx_pool_t  *p;
 
-    p = ngx_memalign(NGX_POOL_ALIGNMENT, size, log);
+    p = ngx_memalign(NGX_POOL_ALIGNMENT, size, log);	//分配内存，可能按照NGX_POOL_ALIGNMENT=16个字节内存对齐-依靠系统实现
     if (p == NULL) {
         return NULL;
     }
 
-    p->d.last = (u_char *) p + sizeof(ngx_pool_t);
+    p->d.last = (u_char *) p + sizeof(ngx_pool_t);//前面用来存ngx_pool_t,后面紧接着就是可供分配的内存了,last为当前可分配的起始位置
     p->d.end = (u_char *) p + size;
     p->d.next = NULL;
     p->d.failed = 0;
 
-    size = size - sizeof(ngx_pool_t);
-    p->max = (size < NGX_MAX_ALLOC_FROM_POOL) ? size : NGX_MAX_ALLOC_FROM_POOL;
+    size = size - sizeof(ngx_pool_t);	//借用size变量来求可供分配的内存大小，一共申请了size大小，前面用来存ngx_pool_t,后面紧接着就是可供分配的内存了
+    p->max = (size < NGX_MAX_ALLOC_FROM_POOL) ? size : NGX_MAX_ALLOC_FROM_POOL;//分配的最大内存块不超过一个内存页大小即NGX_MAX_ALLOC_FROM_POOL=4k或者8k
 
-    p->current = p;
+    p->current = p;		//标示 自己的起始位置，存储自己的指针
     p->chain = NULL;
     p->large = NULL;
     p->cleanup = NULL;
