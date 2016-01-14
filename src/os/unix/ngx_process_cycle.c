@@ -181,7 +181,7 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
             ngx_master_process_exit(cycle);
         }
 
-        if (ngx_terminate) {
+        if (ngx_terminate) {	// 处理NGX_CMD_TERMINATE、SIGTERM、	SIGINT
             if (delay == 0) {
                 delay = 50;
             }
@@ -193,9 +193,9 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
 
             sigio = ccf->worker_processes + 2 /* cache processes */;
 
-            if (delay > 1000) {
+            if (delay > 1000) {	//超过1000ms还没结束的工作进程，直接kill
                 ngx_signal_worker_processes(cycle, SIGKILL);
-            } else {
+            } else {	//正常退出
                 ngx_signal_worker_processes(cycle,
                                        ngx_signal_value(NGX_TERMINATE_SIGNAL));
             }
@@ -203,7 +203,7 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
             continue;
         }
 
-        if (ngx_quit) {
+        if (ngx_quit) {	//处理SIGQUIT信号
             ngx_signal_worker_processes(cycle,
                                         ngx_signal_value(NGX_SHUTDOWN_SIGNAL));
 
@@ -220,10 +220,10 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
             continue;
         }
 
-        if (ngx_reconfigure) {
+        if (ngx_reconfigure) {	//处理sighup信号--平滑升级
             ngx_reconfigure = 0;
 
-            if (ngx_new_binary) {
+            if (ngx_new_binary) {	//不需要重新读取配置文件，直接重启工作进程和缓存索引管理进程
                 ngx_start_worker_processes(cycle, ccf->worker_processes,
                                            NGX_PROCESS_RESPAWN);
                 ngx_start_cache_manager_processes(cycle, 0);
@@ -234,7 +234,7 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
 
             ngx_log_error(NGX_LOG_NOTICE, cycle->log, 0, "reconfiguring");
 
-            cycle = ngx_init_cycle(cycle);
+            cycle = ngx_init_cycle(cycle);	//初始化nginx配置，建立新的cycle
             if (cycle == NULL) {
                 cycle = (ngx_cycle_t *) ngx_cycle;
                 continue;
@@ -277,7 +277,7 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
             ngx_new_binary = ngx_exec_new_binary(cycle, ngx_argv);
         }
 
-        if (ngx_noaccept) {
+        if (ngx_noaccept) {		//服务器不接受请求，并退出全部工作进程
             ngx_noaccept = 0;
             ngx_noaccepting = 1;
             ngx_signal_worker_processes(cycle,
